@@ -1,6 +1,6 @@
 {
   "integration": "L'Herbier Médicinal × TikTok — Content Posting API (video.upload, brouillons inbox)",
-  "environnement": "Sandbox TikTok for Developers — app « L'Herbier Médicinal (Sandbox) »",
+  "environnement": "Sandbox TikTok for Developers — app « L'Herbier Médicinal (Sandbox) », target user @lherbiermedicinal",
   "envois": [
     {
       "episode": "Épisode 1 — Anti-allergie de saison (60 s, 1080×1920)",
@@ -9,7 +9,15 @@
       "octets": 46097990,
       "methode": "FILE_UPLOAD (PUT chunk 46,1 Mo)",
       "date": "2026-10-02 15:53 (UTC+2)"
+    },
+    {
+      "episode": "Épisode 2 (60 s, 1080×1920)",
+      "publish_id": "v_inbox_file~v2.7692110653913597974",
+      "statut": "SEND_TO_USER_INBOX",
+      "octets": 36900000,
+      "methode": "FILE_UPLOAD (PUT chunk 36,9 Mo)",
+      "date": "2026-10-02 18:39 (UTC+2)"
     }
   ],
-  "note": "La vidéo est livrée dans l'inbox de création TikTok du compte @lherbiermedicinal (target user sandbox), qui finalise légende et publication."
+  "note": "Chaque vidéo est livrée dans l'inbox de création TikTok du compte @lherbiermedicinal (target user sandbox), qui finalise légende et publication depuis l'app mobile. Le scope video.publish (direct post) n'est pas distribué en environnement sandbox : TikTok renvoie error=invalid_scope sur la page d'autorisation. L'application tente le direct post privé (SELF_ONLY) et bascule automatiquement en import brouillon."
 }
